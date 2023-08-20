@@ -1,6 +1,6 @@
 class PostImagesController < ApplicationController
 
-   def new
+  def new
     @post_image = PostImage.new
   end
 
@@ -10,7 +10,9 @@ class PostImagesController < ApplicationController
     @post_image.save
     redirect_to post_images_path
   end
+
   def index
+    @post_images = PostImage.all
   end
 
   def show
